@@ -1,0 +1,219 @@
+/* Profile Page */
+.profile-page {
+  display: flex;
+  gap: 3rem;
+  padding: 4rem 2rem;
+}
+
+/* Profile Container */
+.profile-container {
+  flex: 1;
+  min-width: 350px; /* ensures the profile container is not too narrow */
+  background-color: var(--grey-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+  text-align: center;
+  min-height: 400px; /* allow the container to grow with its content */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* ensures content starts from the top */
+}
+
+.profile-container h2 {
+  margin-bottom: 2rem;
+  color: var(--purple-color);
+}
+
+.profile-container p {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.add-book-btn {
+  background-color: var(--pink-color);
+  color: var(--white-color);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 2rem;
+}
+
+.add-book-btn:hover {
+  background-color: var(--purple-color);
+}
+
+/* Profile Booklist */
+.profile-page .booklist {
+  flex: 3;
+  padding: 2rem;
+  background-color: var(--white-color);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.profile-page .booklist h2 {
+  margin-bottom: 2rem;
+  color: var(--purple-color);
+}
+
+.profile-page .booklist-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Book Item Styles */
+.profile-page .booklist-content .book-item {
+  background-color: var(--grey-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: var(--transition);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.profile-page .booklist-content .book-item:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
+
+/* Book Item Image */
+.profile-page .booklist-content .book-item-img {
+  flex: 1;
+  max-width: 120px;
+}
+
+.profile-page .booklist-content .book-item-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Book Item Info */
+.profile-page .booklist-content .book-item-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.profile-page .booklist-content .book-item-info-item {
+  margin-bottom: 0.8rem;
+}
+
+.profile-page .booklist-content .book-item-info-item.title {
+  font-weight: 700;
+}
+
+.profile-page .booklist-content .book-item-info-item.author,
+.profile-page .booklist-content .book-item-info-item.price {
+  font-size: 1.6rem;
+}
+
+.profile-page .booklist-content .book-item-info-item.category {
+  color: var(--purple-color);
+  font-style: italic;
+}
+
+.add-category-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--grey-color);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+}
+
+.add-category-section h3 {
+  font-size: 2rem;
+  color: var(--purple-color);
+  margin-bottom: 1.5rem;
+}
+
+.add-category-section input {
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  margin-right: 1rem;
+  border: 1px solid var(--light-black-color);
+  border-radius: 4px;
+  width: 250px;
+  max-width: 100%;
+}
+
+.add-category-section button {
+  padding: 1rem 2rem;
+  background-color: var(--pink-color);
+  color: var(--white-color);
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.add-category-section button:disabled {
+  background-color: var(--light-black-color);
+  cursor: not-allowed;
+}
+
+.add-category-section button:hover {
+  background-color: var(--purple-color);
+}
+
+.add-category-section .error-message {
+  color: var(--pink-color);
+  margin-top: 1rem;
+}
+
+/* Adjusting the Profile Container for Add Category Section */
+.profile-container {
+  max-width: 350px;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .add-category-section {
+    padding: 1.5rem;
+  }
+
+  .add-category-section input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .add-category-section button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile-page {
+    flex-direction: column;
+  }
+
+  .profile-page .booklist {
+    height: auto;
+  }
+
+  .profile-page .book-item-img img {
+    max-width: 100px;
+  }
+
+  .profile-page .book-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-page .book-item-info {
+    align-items: center;
+  }
+}

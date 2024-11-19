@@ -1,0 +1,238 @@
+.book-details {
+  padding: 6rem 0;
+}
+.back-btn {
+  margin-left: 20px;
+  margin-bottom: 2.6rem;
+  transition: var(--transition);
+}
+.back-btn:hover {
+  color: var(--purple-color);
+}
+.back-btn span {
+  margin-left: 1rem;
+}
+.book-details-content {
+  gap: 4rem;
+}
+.book-details-img {
+  max-height: 600px;
+  overflow: hidden;
+}
+.book-details-img img {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.book-details-item {
+  margin-bottom: 1.4rem;
+}
+.book-details-item.description {
+  opacity: 0.8;
+}
+.book-details-info {
+  overflow-y: scroll;
+  max-height: 600px;
+  padding: 1.4rem;
+}
+.book-details-info::-webkit-scrollbar-track {
+  border-radius: 8px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.book-details-info::-webkit-scrollbar-thumb {
+  background-color: var(--purple-color);
+  outline: -1px solid slategray;
+  border-radius: 8px;
+}
+
+.read-btn {
+  background-color: var(--purple-color);
+  color: var(--white-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: auto;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.read-btn:hover {
+  background-color: var(--pink-color);
+  transform: scale(1.05);
+}
+
+.read-btn:active {
+  background-color: var(--purple-color);
+  transform: scale(0.98);
+}
+
+.read-btn:focus {
+  outline: none;
+}
+
+.read-btn.disabled {
+  background-color: var(--light-black-color);
+  cursor: not-allowed;
+}
+
+.purchase-btn {
+  background-color: var(--purple-color); 
+  color: var(--white-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: auto;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.purchase-btn:hover {
+  background-color: var(--pink-color); 
+  transform: scale(1.05);
+}
+
+.purchase-btn:active {
+  background-color: var(--purple-color); 
+  transform: scale(0.98);
+}
+
+.purchase-btn:focus {
+  outline: none;
+}
+
+.purchase-btn.disabled {
+  background-color: var(--light-black-color);
+  cursor: not-allowed;
+}
+
+
+
+.checkout-form {
+  margin-top: 2rem;
+}
+
+
+.apply-coupon-section {
+  margin-top: 2rem;
+}
+
+.coupon-code-input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  border: 1px solid var(--light-grey-color);
+  border-radius: 5px;
+}
+
+.apply-coupon-btn {
+  background-color: var(--purple-color);
+  color: var(--white-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-right: 1rem;
+}
+
+.apply-coupon-btn:hover {
+  background-color: var(--pink-color);
+  transform: scale(1.05);
+}
+
+.apply-coupon-btn:active {
+  background-color: var(--purple-color);
+  transform: scale(0.98);
+}
+
+.apply-coupon-btn:focus {
+  outline: none;
+}
+
+.add-coupon-form {
+  margin-top: 2rem;
+}
+
+.add-coupon-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--purple-color);
+}
+
+.coupon-code-input-owner {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  border: 1px solid var(--light-grey-color);
+  border-radius: 5px;
+}
+
+.discount-percentage-input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  border: 1px solid var(--light-grey-color);
+  border-radius: 5px;
+}
+
+.expiration-date-input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  border: 1px solid var(--light-grey-color);
+  border-radius: 5px;
+}
+
+.add-coupon-btn {
+  background-color: var(--purple-color);
+  color: var(--white-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-coupon-btn:hover {
+  background-color: var(--pink-color);
+  transform: scale(1.05);
+}
+
+.add-coupon-btn:active {
+  background-color: var(--purple-color);
+  transform: scale(0.98);
+}
+
+.add-coupon-btn:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .book-details-content {
+    grid-template-columns: 40% 60%;
+    gap: 0;
+  }
+  .book-details-img {
+    padding: 0 6rem 0 2rem;
+  }
+  .book-details-img img {
+    max-width: 100%;
+  }
+}
